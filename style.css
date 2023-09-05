@@ -223,7 +223,6 @@ template {
 	font-size: 72px;
 	line-height: 0.9;
 	position: relative;
-	bottom: 25px;
 	display: inline-block;
 }
 
@@ -234,6 +233,15 @@ template {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+span.watermark {
+  font-size: 11px;
+  opacity: 0.6;
+  padding: 8px;
+  text-align: right;
+  padding-top: 0;
+  text-transform: lowercase;
 }
 
 .poster-inner #line5 {
