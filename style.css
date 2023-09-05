@@ -148,163 +148,168 @@ template {
 }
 
 .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  /* margin-top: 48px; */
-  position: absolute;
-  transform: translate(50%, -50%);
-  right: 50%;
-  top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: absolute;
+	transform: translate( 50%, -50% );
+	right: 50%;
+	top: 50%;
 }
 
 .left-side {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  width: 350px;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	width: 350px;
 }
 
 .right-side {
-  margin-left: 52px;
+	margin-left: 52px;
 }
 
 .gov-logo {
-  width: 200px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+	width: 200px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 
 .main-inputs {
-  display: flex;
-  flex-direction: column;
-  margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 24px;
 }
 
 .poster {
-  background: #212E5A;
-  width: 500px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  font-family: "source-sans-pro", sans-serif;
-font-weight: 700;
-font-style: normal;
-text-transform: uppercase;
+	background: #212e5a;
+	width: 500px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+	font-family: 'source-sans-pro', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
 }
 
 .poster-update-box {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  border: 1px solid white;
-  padding: 2px 6px;
-  font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border: 1px solid white;
+	padding: 2px 6px;
+	font-size: 18px;
 }
 
 .poster-top {
-  display: flex;
-  padding: 30px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 0;
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 0;
 }
 
 .poster-top img {
-  width: 120px;
+	max-width: 120px;
+	max-height: 100px;
 }
 
 .poster-inner {
-  margin: auto;
-  text-align: center;
-  font-size: 72px;
-  line-height: 0.9;
-  position: relative;
-  bottom: 25px;
-  display: inline-block;
+	margin: auto;
+	text-align: center;
+	font-size: 72px;
+	line-height: 0.9;
+	position: relative;
+	bottom: 25px;
+	display: inline-block;
 }
 
 .poster-inner span {
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .poster-inner #line5 {
-  background: #C23531;
-  padding: 0 2px;
-  width: auto;
+	background: #c23531;
+	padding: 0 2px;
+	width: auto;
 }
 
 .main-inputs p {
-  margin: 0;
-  margin-bottom: 4px;
+	margin: 0;
+	margin-bottom: 4px;
 }
 
 .main-inputs input {
-  margin-bottom: 18px;
-  max-width: 180px;
+	margin-bottom: 18px;
+	max-width: 180px;
+}
+
+.main-inputs input:last-of-type {
+	margin-bottom: 4px;
 }
 
 .save-button {
-  margin: auto;
+	margin: auto;
 }
 
 .save-button button {
-  background: #212E5A;
-  color: white;
-  padding: 12px;
-  border-radius: 12px;
-  border: 2px solid #131c3a;
-  font-size: 20px;
-  margin-top: 24px;
+	background: #212e5a;
+	color: white;
+	padding: 12px;
+	border-radius: 12px;
+	border: 2px solid #131c3a;
+	font-size: 20px;
+	margin-top: 24px;
+	cursor: pointer;
 }
 
 .save-button button:hover {
-  background: #131c3a;
+	background: #131c3a;
 }
 
+.image-input p,
 .box-input p {
-  margin-bottom: 4px;
+	margin-bottom: 4px;
 }
 
 .box-input input {
-  width: 80px;
+	width: 80px;
 }
 
 .left-side h3 {
-  font-size: 24px;
-  margin: 0;
-  text-decoration: underline;
+	font-size: 24px;
+	margin: 0;
+	text-decoration: underline;
 }
 
 .box-input {
-  text-align: right;
+	text-align: right;
 }
 
 @media only screen and ( max-width: 1024px ) {
+	.content-wrapper {
+		flex-direction: column;
+		position: relative;
+		transform: none;
+		right: auto;
+		top: 120px;
+	}
 
-  .content-wrapper {
-    flex-direction: column;
-    position: relative;
-    transform: none;
-    right: auto;
-    top: 120px;
-  }
-
-  .left-side {
-    margin-bottom: 24px;
-  }
+	.left-side {
+		margin-bottom: 24px;
+	}
 }
 
 @media only screen and ( max-width: 480px ) {
-  .poster {
-    overflow: visible;
-  }
+	.poster {
+		overflow: visible;
+	}
 }
