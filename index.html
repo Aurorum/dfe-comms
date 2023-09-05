@@ -1,1 +1,94 @@
-<p>Start</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Department for Education Graphic Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Aurorum" />
+    <meta
+      name="description"
+      content="Provides a way to generate and download spoofs of the British government's reassurance graphic."
+    />
+    <meta property="og:title" content="Department for Education Graphic Generator" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Provides a way to generate and download spoofs of the British government's reassurance graphic"
+    />
+    <meta
+      property="og:image"
+      content="https://aurorum.github.io/coronavirus-slogan-generator/assets/thumbnail.png"
+    />
+    <meta
+      property="og:url"
+      content="https://dfe-graphic.link"
+    />
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wwm1rav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <img class="gov-logo" src="./assets/gov-logo.png">
+    <div class="content-wrapper">
+      <div class="left-side">
+        <h3>DfE Crisis Reassurance Poster Generator</h3>
+
+        <p class="caption">Does anyone ever take a look at these parody sites and say, "you've done a really good job while everyone has sat around and done nothing?". No sign of that?</p>
+        <p class="caption">Since not, please share this with friends..</p>
+
+        <div class="box-input">
+          <p>Update Box</p>
+          <input maxlength="20" value="RAAC"  onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" id="line1box" type="text">
+          <input maxlength="20" value="Update"  onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" id="line2box" type="text">
+        </div>
+        <div class="main-inputs">
+          <p>Top Line</p>
+          <input  maxlength="40"           onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" value="Most" id="line3box" type="text">
+          <p>Middle Line</p>
+          <input  maxlength="40"            onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" value="Schools" id="line4box" type="text">
+          <p>Bottom Line</p>
+          <input    maxlength="40"          onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" value="Unaffected" id="line5box" type="text">
+          <p>Bonus Line</p>
+          <input   maxlength="40"           onchange="canvasUpdate()"
+          onkeypress="canvasUpdate()"
+          oninput="canvasUpdate()" value="" id="line6box" type="text">
+        </div>
+
+        <div class="save-button">
+          <button onclick="saveImage()">Save image</button>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="poster">
+          <div class="poster-top">
+            <img src="./assets/dfe-logo.png">
+            <div class="poster-update-box">
+              <span id="line1">RAAC</span>
+              <span id="line2">Update</span>
+            </div>
+          </div>
+          <div class="poster-inner">
+            <span id="line3">Most</span>
+            <span id="line4">Schools</span>
+            <span id="line5">Unaffected</span>
+            <span id="line6"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
