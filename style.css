@@ -236,12 +236,12 @@ template {
 }
 
 span.watermark {
-  font-size: 11px;
-  opacity: 0.6;
-  padding: 8px;
-  text-align: right;
-  padding-top: 0;
-  text-transform: lowercase;
+	font-size: 11px;
+	opacity: 0.6;
+	padding: 8px;
+	text-align: right;
+	padding-top: 0;
+	text-transform: lowercase;
 }
 
 .poster-inner #line5 {
